@@ -1,4 +1,4 @@
-# appdevstudioswift
+# appdevstudioandroid
 Mason App Development Studio 5th Bell Team
 
-This will contain all project files and assets for the swift version of our application.
+This will contain all project files and assets for the android version of our application.
