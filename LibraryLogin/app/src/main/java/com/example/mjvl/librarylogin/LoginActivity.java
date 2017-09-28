@@ -1,35 +1,3 @@
-/*
-
-odbc calls to sql, sql, or apis
-eschool
-powerschool
-alma
-apis
-
-first:
-
-check in to web
-
-second:
-
-authenticate users
-
-third:
-
-location
-
-talking to McCormick, Robinson, IT Guys for wifi
-
-student id page with picture and #
-
-Qs?
-happens when graduation
-accessing id
-
-business plan
-
-*/
-
 package com.example.mjvl.librarylogin;
 
 import android.support.v7.app.AppCompatActivity;
