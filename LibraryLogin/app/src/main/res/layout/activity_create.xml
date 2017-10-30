@@ -8,77 +8,77 @@
     tools:layout_editor_absoluteY="81dp">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/lblFirstNameC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="First Name:"
-        app:layout_constraintBottom_toTopOf="@+id/txtFirstName"
+        app:layout_constraintBottom_toTopOf="@+id/txtFirstNameC"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/lblLastName"
+        android:id="@+id/lblLastNameC"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginBottom="15dp"
         android:layout_marginStart="16dp"
         android:text="Last Name:"
-        app:layout_constraintBottom_toTopOf="@+id/txtLastName"
+        app:layout_constraintBottom_toTopOf="@+id/txtLastNameC"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFirstName" />
+        app:layout_constraintTop_toBottomOf="@+id/txtFirstNameC" />
 
     <EditText
-        android:id="@+id/txtLastName"
+        android:id="@+id/txtLastNameC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="19dp"
         android:layout_marginStart="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/lblStudentID"
+        app:layout_constraintBottom_toTopOf="@+id/lblStudentIDC"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblLastName" />
+        app:layout_constraintTop_toBottomOf="@+id/lblLastNameC" />
 
     <EditText
-        android:id="@+id/txtFirstName"
+        android:id="@+id/txtFirstNameC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="19dp"
         android:layout_marginStart="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/lblLastName"
+        app:layout_constraintBottom_toTopOf="@+id/lblLastNameC"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/lblFirstNameC" />
 
     <EditText
-        android:id="@+id/txtStudentID"
+        android:id="@+id/txtStudentIDC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="21dp"
         android:layout_marginStart="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/btnCreate"
+        app:layout_constraintBottom_toTopOf="@+id/btnCreateC"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblStudentID" />
+        app:layout_constraintTop_toBottomOf="@+id/lblStudentIDC" />
 
     <TextView
-        android:id="@+id/lblStudentID"
+        android:id="@+id/lblStudentIDC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_marginStart="16dp"
         android:text="Student ID #:"
-        app:layout_constraintBottom_toTopOf="@+id/txtStudentID"
+        app:layout_constraintBottom_toTopOf="@+id/txtStudentIDC"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLastName" />
+        app:layout_constraintTop_toBottomOf="@+id/txtLastNameC" />
 
     <Button
-        android:id="@+id/btnCreate"
+        android:id="@+id/btnCreateC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="152dp"
@@ -86,6 +86,6 @@
         android:text="Create Account"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtStudentID" />
+        app:layout_constraintTop_toBottomOf="@+id/txtStudentIDC" />
 
 </android.support.constraint.ConstraintLayout>

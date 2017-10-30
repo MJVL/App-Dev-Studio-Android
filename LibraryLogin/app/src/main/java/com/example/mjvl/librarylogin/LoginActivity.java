@@ -2,7 +2,6 @@ package com.example.mjvl.librarylogin;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.content.Intent;
 import android.widget.EditText;
@@ -35,9 +34,9 @@ public class LoginActivity extends AppCompatActivity {
                 sendMessage(view);
             }
         });
-        txtFirstName = (EditText)findViewById(R.id.txtFirstName);
-        txtLastName = (EditText)findViewById(R.id.txtLastName);
-        txtStudentID = (EditText)findViewById(R.id.txtStudentID);
+        txtFirstName = (EditText)findViewById(R.id.txtFirstNameC);
+        txtLastName = (EditText)findViewById(R.id.txtLastNameC);
+        txtStudentID = (EditText)findViewById(R.id.txtStudentIDC);
     }
 
     public void sendMessage(View view) {

@@ -15,17 +15,17 @@
         android:layout_marginTop="84dp"
         android:text="Create An Account"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtStudentID"
+        app:layout_constraintTop_toBottomOf="@+id/txtStudentIDC"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1" />
 
     <TextView
-        android:id="@+id/lblStudentID"
+        android:id="@+id/lblStudentIDC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Student ID #:"
         tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/txtStudentID"
+        app:layout_constraintBottom_toTopOf="@+id/txtStudentIDC"
         android:layout_marginStart="16dp"
         tools:layout_constraintLeft_creator="1"
         android:layout_marginBottom="10dp"
@@ -33,27 +33,27 @@
         android:layout_marginLeft="16dp" />
 
     <EditText
-        android:id="@+id/txtLastName"
+        android:id="@+id/txtLastNameC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/txtStudentID"
+        app:layout_constraintRight_toRightOf="@+id/txtStudentIDC"
         android:layout_marginTop="41dp"
-        app:layout_constraintTop_toBottomOf="@+id/txtFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/txtFirstNameC"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/txtStudentID"
+        app:layout_constraintLeft_toLeftOf="@+id/txtStudentIDC"
         app:layout_constraintHorizontal_bias="0.0" />
 
     <TextView
-        android:id="@+id/lblLastName"
+        android:id="@+id/lblLastNameC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Last Name:"
         tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/txtLastName"
+        app:layout_constraintBottom_toTopOf="@+id/txtLastNameC"
         android:layout_marginStart="16dp"
         tools:layout_constraintLeft_creator="1"
         android:layout_marginBottom="11dp"
@@ -61,7 +61,7 @@
         android:layout_marginLeft="16dp" />
 
     <TextView
-        android:id="@+id/lblFirstName"
+        android:id="@+id/lblFirstNameC"
         android:layout_width="wrap_content"
         android:layout_height="15dp"
         android:layout_marginLeft="16dp"
@@ -73,22 +73,22 @@
         tools:layout_constraintTop_creator="1" />
 
     <EditText
-        android:id="@+id/txtFirstName"
+        android:id="@+id/txtFirstNameC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/txtLastName"
+        app:layout_constraintRight_toRightOf="@+id/txtLastNameC"
         android:layout_marginTop="12dp"
-        app:layout_constraintTop_toBottomOf="@+id/lblFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/lblFirstNameC"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/txtLastName"
+        app:layout_constraintLeft_toLeftOf="@+id/txtLastNameC"
         app:layout_constraintHorizontal_bias="0.0" />
 
     <EditText
-        android:id="@+id/txtStudentID"
+        android:id="@+id/txtStudentIDC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -96,7 +96,7 @@
         tools:layout_constraintTop_creator="1"
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
-        app:layout_constraintTop_toBottomOf="@+id/txtLastName"
+        app:layout_constraintTop_toBottomOf="@+id/txtLastNameC"
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="16dp" />
@@ -110,7 +110,7 @@
         android:layout_marginTop="23dp"
         android:text="Login"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtStudentID"
+        app:layout_constraintTop_toBottomOf="@+id/txtStudentIDC"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1" />
 
