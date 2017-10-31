@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class CreateActivity extends AppCompatActivity {
 
@@ -30,6 +31,11 @@ public class CreateActivity extends AppCompatActivity {
 
     public void sendMessage(View view) {
         Intent myIntent = new Intent(this, LoginActivity.class);
+        /*
+        myIntent.putExtra("FNAME",txtFirstNameC.getText().toString());
+        myIntent.putExtra("LNAME",txtLastNameC.getText().toString());
+        myIntent.putExtra("STUDENTID",Integer.parseInt(txtStudentIDC.getText().toString()));
+        */
         startActivity(myIntent);
     }
 
