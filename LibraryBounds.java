@@ -23,7 +23,7 @@ public class LibraryBounds {
     }
 
     public static boolean checkBounds(double lat, double lon) {
-        if (lat < MAX_LAT && lat > MIN_LAT && lon < MAX_LON && lon > MIN_LON) {
+        if (lat <= MAX_LAT && lat >= MIN_LAT && lon <= MAX_LON && lon >= MIN_LON) {
             return true;
         }
         return false;
