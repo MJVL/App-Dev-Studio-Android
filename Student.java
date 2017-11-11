@@ -6,10 +6,8 @@ public class Student {
     private int Year;
 
     public Student() {
-        Fname = "";
-        Lname = "";
-        ID = 0;
-        Year = 0;
+        Fname = Lname = null;
+        ID = Year = 0;
     }
 
     public Student(String Fname, String Lname, int ID, int Year) {
