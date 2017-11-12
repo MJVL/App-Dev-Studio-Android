@@ -12,7 +12,7 @@ import mjvl.github.io.libraryloginsql.model.User;
  * Created by micha on 11/12/2017.
  */
 
-public class DatabaseHelper  extends SQLiteOpenHelper{
+public class DatabaseHelper extends SQLiteOpenHelper{
 
     private static final int DATABASE_VERSION = 1;
 
