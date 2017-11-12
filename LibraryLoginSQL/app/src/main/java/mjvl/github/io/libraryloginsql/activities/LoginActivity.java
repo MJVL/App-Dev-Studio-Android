@@ -69,13 +69,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             return;
         }
         if (databaseHelper.checkUser(txtEmail.getText().toString().trim(), txtPassword.getText().toString().trim())) {
-//            Intent accountsIntent = new Intent(activity, UsersActivity.class);
-//            accountsIntent.putExtra("EMAIL", textInputEditTextEmail.getText().toString().trim());
+            Intent accountsIntent = new Intent(Activity, HomeActivity.class);
+            accountsIntent.putExtra("EMAIL", txtEmail.getText().toString().trim());
             Toast.makeText(getApplicationContext(), "Login Successful",
                     Toast.LENGTH_SHORT).show();
               txtPassword.setText(null);
               txtEmail.setText(null);
-//            startActivity(accountsIntent);
+            startActivity(accountsIntent);
         } else {
             Toast.makeText(getApplicationContext(), getString(R.string.error_valid_email_password),
                     Toast.LENGTH_SHORT).show();
