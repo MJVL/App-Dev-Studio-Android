@@ -21,7 +21,32 @@
             android:layout_marginTop="40dp"
             android:src="@drawable/liblogo" >
         </android.support.v7.widget.AppCompatImageView>
-        
+
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:hint="@string/hint_email"
+            android:textColorHint="@color/colorText"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:textColor="@color/colorText"/>
+
+        <EditText
+            android:id="@+id/txtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:hint="@string/hint_password"
+            android:textColorHint="@color/colorText"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:textColor="@color/colorText"/>
+
+
+
     </android.support.v7.widget.LinearLayoutCompat>
+
 
 </android.support.v4.widget.NestedScrollView>
