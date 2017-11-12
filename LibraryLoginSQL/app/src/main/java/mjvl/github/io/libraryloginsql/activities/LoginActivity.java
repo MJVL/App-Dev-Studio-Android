@@ -1,7 +1,9 @@
-package mjvl.github.io.libraryloginsql;
+package mjvl.github.io.libraryloginsql.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import mjvl.github.io.libraryloginsql.R;
 
 public class LoginActivity extends AppCompatActivity {
 
