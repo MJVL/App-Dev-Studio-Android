@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -64,15 +65,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         switch (v.getId()){
             case R.id.btnRegister:
                 postDataToSQLite();
-//                user.setName(txtName.getText().toString().trim());
-//                user.setEmail(txtEmail.getText().toString().trim());
-//                user.setPassword(txtPassword.getText().toString().trim());
-//                databaseHelper.addUser(user);
-//                txtName.setText(null);
-//                txtPassword.setText(null);
-//                txtEmail.setText(null);
-//                txtConfirmPassword.setText(null);
-//                finish();
                 break;
             case R.id.lblLogin:
                 finish();
@@ -96,24 +88,22 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         if (!inputValidation.isInputEditTextMatches(txtPassword, txtConfirmPassword, getString(R.string.error_password_match))) {
             return;
         }
-
-//        if (!databaseHelper.checkUser(textInputEditTextEmail.getText().toString().trim())) {
-//
-//            user.setName(textInputEditTextName.getText().toString().trim());
-//            user.setEmail(textInputEditTextEmail.getText().toString().trim());
-//            user.setPassword(textInputEditTextPassword.getText().toString().trim());
-//
-//            databaseHelper.addUser(user);
-//
-//            // Snack Bar to show success message that record saved successfully
-//            Snackbar.make(nestedScrollView, getString(R.string.success_message), Snackbar.LENGTH_LONG).show();
-//            emptyInputEditText();
-//
-//
-//        } else {
-//            // Snack Bar to show error message that record already exists
-//            Snackbar.make(nestedScrollView, getString(R.string.error_email_exists), Snackbar.LENGTH_LONG).show();
-//        }
+        if (!databaseHelper.checkUser(txtEmail.getText().toString().trim())) {
+            user.setName(txtName.getText().toString().trim());
+            user.setEmail(txtEmail.getText().toString().trim());
+            user.setPassword(txtPassword.getText().toString().trim());
+            databaseHelper.addUser(user);
+            databaseHelper.addUser(user);
+            Toast.makeText(getApplicationContext(), getString(R.string.success_message),
+                    Toast.LENGTH_SHORT).show();
+            txtName.setText(null);
+            txtPassword.setText(null);
+            txtEmail.setText(null);
+            txtConfirmPassword.setText(null);
+        } else {
+            Toast.makeText(getApplicationContext(), getString(R.string.error_email_exists),
+                    Toast.LENGTH_SHORT).show();
+        }
     }
 
 }
