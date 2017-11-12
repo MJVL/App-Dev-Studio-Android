@@ -1,5 +1,6 @@
 package com.example.micha.libraryloginrevised;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,7 +23,8 @@ public class LoginActivity extends AppCompatActivity {
         lblRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+                Intent registerIntent = new Intent(LoginActivity.this, RegisterActivity.class);
+                LoginActivity.this.startActivity(registerIntent);
             }
         });
     }
