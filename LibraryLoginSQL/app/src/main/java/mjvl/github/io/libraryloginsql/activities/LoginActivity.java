@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
 
         nestedScrollView = (NestedScrollView) findViewById(R.id.nestedScrollView);
         txtEmail = (EditText) findViewById(R.id.txtEmail);
