@@ -40,6 +40,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btnLogin.setOnClickListener(this);
         lblRegister.setOnClickListener(this);
 
+        databaseHelper = new DatabaseHelper(Activity);
+        inputValidation = new InputValidation(Activity);
+
     }
 
     @Override
@@ -65,11 +68,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if (!inputValidation.isInputEditTextFilled(txtPassword, getString(R.string.error_message_email))) {
             return;
         }
-
         if (databaseHelper.checkUser(txtEmail.getText().toString().trim(), txtPassword.getText().toString().trim())) {
 //            Intent accountsIntent = new Intent(activity, UsersActivity.class);
 //            accountsIntent.putExtra("EMAIL", textInputEditTextEmail.getText().toString().trim());
-//            emptyInputEditText();
+            Toast.makeText(getApplicationContext(), "Login Successful",
+                    Toast.LENGTH_SHORT).show();
+              txtPassword.setText(null);
+              txtEmail.setText(null);
 //            startActivity(accountsIntent);
         } else {
             Toast.makeText(getApplicationContext(), getString(R.string.error_valid_email_password),
