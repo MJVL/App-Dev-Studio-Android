@@ -14,6 +14,77 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/liblogo" >
+        </android.support.v7.widget.AppCompatImageView>
+        
+        <EditText
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/hint_name"
+            android:textColorHint="@color/colorText"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/colorText" />
+        
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/hint_email"
+            android:textColorHint="@color/colorText"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:textColor="@color/colorText" />
+
+        <EditText
+            android:id="@+id/txtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/hint_password"
+            android:textColorHint="@color/colorText"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:textColor="@color/colorText" />
+
+        <EditText
+            android:id="@+id/txtConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/hint_confirm_password"
+            android:textColorHint="@color/colorText"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:textColor="@color/colorText" />
+        
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorText"
+            android:background="@color/colorTextHint"
+            android:text="@string/text_register" />
+        
+        <TextView
+            android:id="@+id/lblLogin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="@string/text_member"
+            android:textSize="16sp"
+            android:textColor="@color/colorText" />
+
     </android.support.v7.widget.LinearLayoutCompat>
 
 
