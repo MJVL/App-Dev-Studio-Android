@@ -1,4 +1,4 @@
-package com.example.micha.libraryloginsql;
+package mjvl.github.io.libraryloginsql;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.micha.libraryloginsql", appContext.getPackageName());
+        assertEquals("mjvl.github.io.libraryloginsql", appContext.getPackageName());
     }
 }

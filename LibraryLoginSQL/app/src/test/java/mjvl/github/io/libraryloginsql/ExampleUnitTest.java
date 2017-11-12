@@ -1,4 +1,4 @@
-package com.example.micha.libraryloginsql;
+package mjvl.github.io.libraryloginsql;
 
 import org.junit.Test;
 
