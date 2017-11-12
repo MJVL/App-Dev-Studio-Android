@@ -9,8 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import mjvl.github.io.libraryloginsql.R;
 import mjvl.github.io.libraryloginsql.helper.InputValidation;
+import mjvl.github.io.libraryloginsql.model.User;
 import mjvl.github.io.libraryloginsql.sql.DatabaseHelper;
 
 /**
@@ -19,6 +22,19 @@ import mjvl.github.io.libraryloginsql.sql.DatabaseHelper;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private final AppCompatActivity activity = RegisterActivity.this;
+
+    private NestedScrollView nestedScrollView;
+    private EditText txtName;
+    private EditText txtEmail;
+    private EditText txtPassword;
+    private EditText txtConfirmPassword;
+    private Button btnRegister;
+    private TextView lblLogin;
+    private InputValidation inputValidation;
+    private DatabaseHelper databaseHelper;
+    private User user;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +42,78 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_register);
         getSupportActionBar().hide();
 
+        nestedScrollView = (NestedScrollView) findViewById(R.id.nestedScrollView);
+        txtName = (EditText) findViewById(R.id.txtName);
+        txtEmail = (EditText) findViewById(R.id.txtEmail);
+        txtPassword = (EditText) findViewById(R.id.txtPassword);
+        txtConfirmPassword = (EditText) findViewById(R.id.txtConfirmPassword);
+        btnRegister = (Button) findViewById(R.id.btnRegister);
+        lblLogin = (TextView) findViewById(R.id.lblLogin);
+
+        btnRegister.setOnClickListener(this);
+        lblLogin.setOnClickListener(this);
+
+        inputValidation = new InputValidation(activity);
+        databaseHelper = new DatabaseHelper(activity);
+        user = new User();
+
     }
 
     @Override
     public void onClick(View v){
+        switch (v.getId()){
+            case R.id.btnRegister:
+                postDataToSQLite();
+//                user.setName(txtName.getText().toString().trim());
+//                user.setEmail(txtEmail.getText().toString().trim());
+//                user.setPassword(txtPassword.getText().toString().trim());
+//                databaseHelper.addUser(user);
+//                txtName.setText(null);
+//                txtPassword.setText(null);
+//                txtEmail.setText(null);
+//                txtConfirmPassword.setText(null);
+//                finish();
+                break;
+            case R.id.lblLogin:
+                finish();
+                break;
+        }
+    }
 
+    private void postDataToSQLite() {
+        if (!inputValidation.isInputEditTextFilled(txtName, getString(R.string.error_message_name))) {
+            return;
+        }
+        if (!inputValidation.isInputEditTextFilled(txtEmail, getString(R.string.error_message_email))) {
+            return;
+        }
+        if (!inputValidation.isInputEditTextEmail(txtEmail, getString(R.string.error_message_email))) {
+            return;
+        }
+        if (!inputValidation.isInputEditTextFilled(txtPassword, getString(R.string.error_message_password))) {
+            return;
+        }
+        if (!inputValidation.isInputEditTextMatches(txtPassword, txtConfirmPassword, getString(R.string.error_password_match))) {
+            return;
+        }
+
+//        if (!databaseHelper.checkUser(textInputEditTextEmail.getText().toString().trim())) {
+//
+//            user.setName(textInputEditTextName.getText().toString().trim());
+//            user.setEmail(textInputEditTextEmail.getText().toString().trim());
+//            user.setPassword(textInputEditTextPassword.getText().toString().trim());
+//
+//            databaseHelper.addUser(user);
+//
+//            // Snack Bar to show success message that record saved successfully
+//            Snackbar.make(nestedScrollView, getString(R.string.success_message), Snackbar.LENGTH_LONG).show();
+//            emptyInputEditText();
+//
+//
+//        } else {
+//            // Snack Bar to show error message that record already exists
+//            Snackbar.make(nestedScrollView, getString(R.string.error_email_exists), Snackbar.LENGTH_LONG).show();
+//        }
     }
 
 }
