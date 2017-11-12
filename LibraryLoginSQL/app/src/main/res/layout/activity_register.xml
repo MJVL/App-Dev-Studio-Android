@@ -70,7 +70,7 @@
             android:id="@+id/btnRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:textColor="@color/colorText"
             android:background="@color/colorTextHint"
             android:text="@string/text_register" />
@@ -79,7 +79,7 @@
             android:id="@+id/lblLogin"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="25dp"
             android:gravity="center"
             android:text="@string/text_member"
             android:textSize="16sp"
