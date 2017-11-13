@@ -23,14 +23,16 @@
 
         <TextView
             android:id="@+id/lblWelcome"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
+            android:gravity="center"
             android:padding="16dp"
             android:textAlignment="center"
             android:textColor="@color/colorText"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:text="@string/signed_in"/>
 
         <Button
             android:id="@+id/btnCheck"
