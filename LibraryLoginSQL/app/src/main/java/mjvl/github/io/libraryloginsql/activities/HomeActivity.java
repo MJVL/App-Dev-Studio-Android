@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import mjvl.github.io.libraryloginsql.R;
@@ -15,14 +16,21 @@ import mjvl.github.io.libraryloginsql.R;
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView lblWelcome;
+    private TextView lblStatus;
+    private Button btnCheck;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
         lblWelcome = (TextView) findViewById(R.id.lblWelcome);
+        lblStatus = (TextView) findViewById(R.id.lblStatus);
+        btnCheck = (Button) findViewById(R.id.btnCheck);
         String nameFromIntent = getIntent().getStringExtra("EMAIL");
         lblWelcome.setText("Welcome " + nameFromIntent);
+
+        btnCheck.setOnClickListener(this);
     }
 
     @Override
