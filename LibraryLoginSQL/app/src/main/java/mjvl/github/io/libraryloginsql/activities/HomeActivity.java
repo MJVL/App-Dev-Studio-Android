@@ -48,18 +48,18 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 if(GPS.canGetLocation()){
                     lat = GPS.getLatitude();
                     lon = GPS.getLongitude();
-                    Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + lat + "\nLong: " + lon, Toast.LENGTH_LONG).show();
+                    if (LibraryBounds.checkBounds(lat,lon)) {
+                        Toast.makeText(getApplicationContext(), lat + "," + lon + "In Bounds", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        Toast.makeText(getApplicationContext(), lat + "," + lon + "Out of Bounds", Toast.LENGTH_SHORT).show();
+                    }
                 }else{
                     // can't get location
                     // GPS or Network is not enabled
                     // Ask user to enable GPS/network in settings
+                    Toast.makeText(getApplicationContext(), "Can't Get Position", Toast.LENGTH_SHORT).show();
                     GPS.showSettingsAlert();
-                }
-                if (LibraryBounds.checkBounds(lat,lon)) {
-                    Toast.makeText(getApplicationContext(), "In Bounds", Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    Toast.makeText(getApplicationContext(), "Out of Bounds", Toast.LENGTH_SHORT).show();
                 }
                 break;
         }
