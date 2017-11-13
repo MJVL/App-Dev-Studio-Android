@@ -58,7 +58,6 @@ public class InputValidation {
     }
 
     private void createToast(String message) {
-        Toast.makeText(context, message,
-                Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
 }
