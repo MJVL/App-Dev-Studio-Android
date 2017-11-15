@@ -41,11 +41,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         databaseHelper = new DatabaseHelper(Activity);
         inputValidation = new InputValidation(Activity);
-
     }
 
     @Override
-    public void onClick(View v){
+    public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnLogin:
                 verifyFromSQLite();
@@ -57,7 +56,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
-    private void verifyFromSQLite(){
+    private void verifyFromSQLite() {
         if (!inputValidation.isInputEditTextFilled(txtEmail, getString(R.string.error_message_email))) {
             return;
         }
