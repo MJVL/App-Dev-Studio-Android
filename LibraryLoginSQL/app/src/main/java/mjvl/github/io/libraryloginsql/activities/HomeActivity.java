@@ -26,7 +26,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnCheck;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
@@ -39,8 +39,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View v){
-        switch (v.getId()){
+    public void onClick(View v) {
+        switch (v.getId()) {
             case R.id.btnCheck:
                 double lat = 0, lon = 0;
                 GPSTracker GPS = new GPSTracker(HomeActivity.this);
