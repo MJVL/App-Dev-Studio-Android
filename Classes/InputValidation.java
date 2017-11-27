@@ -41,10 +41,10 @@ public class InputValidation {
         return true;
     }
 
-    public boolean isInputEditTextMatches(EditText textInputEditText1, EditText textInputEditText2, String message ){
+    public boolean isInputEditTextMatches(EditText textInputEditText1, EditText textInputEditText2, String message){
         String value1 = textInputEditText1.getText().toString().trim();
         String value2 = textInputEditText2.getText().toString().trim();
-        if (!value1.contentEquals(value2)){
+        if (!value1.contentEquals(value2)) {
             createToast(message);
             hideKeyboardFrom(textInputEditText2);
             return false;
