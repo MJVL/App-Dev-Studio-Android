@@ -41,7 +41,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-       //getSupportActionBar().hide();
 
         nestedScrollView = (NestedScrollView) findViewById(R.id.nestedScrollView);
         txtName = (EditText) findViewById(R.id.txtName);
@@ -61,8 +60,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     @Override
-    public void onClick(View v){
-        switch (v.getId()){
+    public void onClick(View v) {
+        switch (v.getId()) {
             case R.id.btnRegister:
                 postDataToSQLite();
                 break;

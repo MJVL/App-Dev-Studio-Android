@@ -26,7 +26,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnCheck;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
@@ -39,7 +39,11 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
+<<<<<<< HEAD
     public void onClick(View v){
+=======
+    public void onClick(View v) {
+>>>>>>> d016c9aeba71111b7ab3b964e44313caa17a4fd6
         switch (v.getId()) {
             case R.id.btnCheck:
                 double lat, lon;
@@ -49,6 +53,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 if (GPS.canGetLocation()){
                     lat = GPS.getLatitude();
                     lon = GPS.getLongitude();
+<<<<<<< HEAD
                     Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + lat + "\nLong: " + lon, Toast.LENGTH_LONG).show();
                     if (LibraryBounds.checkBounds(lat,lon)) {
                         Toast.makeText(getApplicationContext(), "In Bounds", Toast.LENGTH_SHORT).show();
@@ -57,9 +62,19 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                         Toast.makeText(getApplicationContext(), "Out of Bounds", Toast.LENGTH_SHORT).show();
                     }
                 } else {
+=======
+                    if (LibraryBounds.checkBounds(lat,lon)) {
+                        Toast.makeText(getApplicationContext(), lat + "," + lon + "In Bounds", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        Toast.makeText(getApplicationContext(), lat + "," + lon + "Out of Bounds", Toast.LENGTH_SHORT).show();
+                    }
+                }else{
+>>>>>>> d016c9aeba71111b7ab3b964e44313caa17a4fd6
                     // can't get location
                     // GPS or Network is not enabled
                     // Ask user to enable GPS/network in settings
+                    Toast.makeText(getApplicationContext(), "Can't Get Position", Toast.LENGTH_SHORT).show();
                     GPS.showSettingsAlert();
                 }
                 break;
