@@ -40,26 +40,27 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v){
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btnCheck:
-                double lat = 0, lon = 0;
+                double lat, lon;
+                lat = lon = 0;
                 GPSTracker GPS = new GPSTracker(HomeActivity.this);
                 // check if GPS enabled
-                if(GPS.canGetLocation()){
+                if (GPS.canGetLocation()){
                     lat = GPS.getLatitude();
                     lon = GPS.getLongitude();
                     Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + lat + "\nLong: " + lon, Toast.LENGTH_LONG).show();
-                }else{
+                    if (LibraryBounds.checkBounds(lat,lon)) {
+                        Toast.makeText(getApplicationContext(), "In Bounds", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        Toast.makeText(getApplicationContext(), "Out of Bounds", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
                     // can't get location
                     // GPS or Network is not enabled
                     // Ask user to enable GPS/network in settings
                     GPS.showSettingsAlert();
-                }
-                if (LibraryBounds.checkBounds(lat,lon)) {
-                    Toast.makeText(getApplicationContext(), "In Bounds", Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    Toast.makeText(getApplicationContext(), "Out of Bounds", Toast.LENGTH_SHORT).show();
                 }
                 break;
         }
